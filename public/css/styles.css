@@ -4,7 +4,20 @@ html, body {
     overflow-x: hidden;
 }
 
+footer {
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #dfdfdf!important;
+    transform: translateY(100%);
+}
 
+footer a {
+    color: white;
+    right: 50%;
+}
 
 /* HOME PAGE */
 .home-container {
@@ -19,6 +32,23 @@ html, body {
 .top-pic {
     float: right;
 }
+
+.search-recipe {
+    position: absolute;
+    left: 40%;
+    margin-bottom: 300px;
+}
+
+#home-padding {
+    margin-top: 300px;
+}
+
+
+
+
+
+
+
 
 /* RECIPE PAGE */
 .recipe-image {
@@ -70,6 +100,11 @@ html, body {
 
 .titles {
     color: black;
+}
+
+.titles:hover {
+    text-decoration: none;
+
 }
 
 .text {

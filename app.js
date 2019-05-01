@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var session = require('express-session');
 var expressValidator = require('express-validator');
-var home = require('./routes/home');
+var index = require('./routes/index');
 
 var app = express();
 
@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('port', (process.env.PORT || 3000));
 
 //Routes
-app.use('/', home.router);
+app.use('/', index.router);
 
 var server = app.listen(app.get('port'), () => {
     console.log('Server started on port ' + app.get('port'));
