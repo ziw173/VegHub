@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <% include ./partials/header.ejs %> 
-    <script type="text/javascript" src="/js/home.js"></script>   
+    <% include ./partials/header.ejs %>
+    <script type="text/javascript" src="/js/home.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -89,7 +89,7 @@
         <a href="#" class="next round">&#8250;</a>
 
         <div class='search-recipe'>
-            <input id="search-box" type="text" size="20"/>
+            <input id="search-box" type="text" size="20" />
             <button id="recipe-button">Search Food</button>
             <div id='food-title'></div>
             <img id='food-pic'></img>
@@ -97,6 +97,19 @@
         <div id='home-padding'></div>
 
         <% include ./partials/footer.ejs %>
+        
+        <form action="">
+            <label for="comment">Comment</label>
+            <input type="text" id="comment" name="comments" placeholder="Your Review...">
+
+            <label for="diet">Your Diet</label>
+            <select id="diet" name="Diet">
+                <option value="vegan">Vegan</option>
+                <option value="vegetarian">Vegetarian</option>
+            </select>
+
+            <input type="submit" value="Submit">
+        </form>
     </div>
 </body>
 
