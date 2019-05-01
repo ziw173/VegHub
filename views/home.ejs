@@ -97,19 +97,32 @@
         <div id='home-padding'></div>
 
         <% include ./partials/footer.ejs %>
-        
-        <form action="">
-            <label for="comment">Comment</label>
-            <input type="text" id="comment" name="comments" placeholder="Your Review...">
 
-            <label for="diet">Your Diet</label>
-            <select id="diet" name="Diet">
-                <option value="vegan">Vegan</option>
-                <option value="vegetarian">Vegetarian</option>
-            </select>
+        <div class="disccussion">
+            <form action="">
+                <label for="comment">Comment</label>
+                <input type="text" id="comment" name="comments" placeholder="Your Review...">
 
-            <input type="submit" value="Submit">
-        </form>
+                <label for="diet">Your Diet</label>
+                <select id="diet" name="Diet">
+                    <option value="vegan">Vegan</option>
+                    <option value="vegetarian">Vegetarian</option>
+                </select>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <div>
+            <form action="">
+                <label for="recipeSubmission">Recipe Submission</label>
+                <input type="text" id="recipeSubmission" name="submission" placeholder="Share your recipe...">
+
+                <button type="button" onclick="alert('This should submit Recipe Picture')">Upload Recipe Picture</button>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
     </div>
 </body>
 
