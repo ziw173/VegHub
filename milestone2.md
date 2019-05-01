@@ -15,9 +15,9 @@ voting, commenting, achievement systems and leading board.
 ### Screenshots of our web
 The screenshot of our home page is different from our paper prototype since we implemented a 
 sign in and a log in option on the homepage rather than on the landing page. We decided to remove the 
-professional cookbook and replaced it with all personal homemade recipes. 
+professional cookbook and replaced it with all personal homemade recipes.
 By doing so, users can upload their creative homemade-recipes and share with others. 
-Users can also vote, react, and comment on each other’s recipes.
+Users can also vote, react, and comment on each other’s recipes. These intereactions were previously not listed in the prototype
 The screenshot of our recipe page is also slightly different from our paper prototype in terms of its layout. 
 What we actually wanted on the web basically became different from what we wanted on paper.the profile will also go through some changes to implement the achievement system.
 
