@@ -37,6 +37,10 @@ router.get('/profile', (req, res) => {
     res.render('profile');
 });
 
+router.get('/singleRecipe', (req, res) => {
+    res.render('singleRecipe');
+});
+
 
 module.exports = {
     router: router
