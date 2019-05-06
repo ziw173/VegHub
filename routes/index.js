@@ -25,22 +25,6 @@ router.get('/food/:foodid', (req, res) => {
     }
 });
 
-router.get('/recipe', (req, res) => {
-    res.render('recipe');
-});
-
-router.get('/register', (req, res) => {
-    res.render('register');
-});
-
-router.get('/profile', (req, res) => {
-    res.render('profile');
-});
-
-router.get('/singleRecipe', (req, res) => {
-    res.render('singleRecipe');
-});
-
 
 module.exports = {
     router: router
