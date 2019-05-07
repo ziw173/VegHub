@@ -42,6 +42,21 @@ footer a {
     margin-top: 300px;
 }
 
+.add-recipe-button {
+    height:40px; 
+    width:80px; 
+    margin: 0px -50px; 
+    position:relative;
+    left:45%;
+}
+
+.delete-recipe-button {
+    height:40px; 
+    width:80px;
+    position: relative;
+    left: 55%;
+}
+
 
 
 
