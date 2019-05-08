@@ -26,6 +26,11 @@ router.get('/food/:foodid', (req, res) => {
     }
 });
 
+router.post('/postRecipe', (req,res) => {
+    console.log(req.body);
+    res.redirect('/');
+});
+
 
 module.exports = {
     router: router
