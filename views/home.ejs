@@ -87,7 +87,7 @@
 
         <a href="#" class="previous round">&#8249;</a>
         <a href="#" class="next round">&#8250;</a>
-
+        
         <div class='search-recipe'>
             <input id="search-box" type="text" size="20" />
             <button id="recipe-button">Search Food</button>
@@ -107,10 +107,11 @@
                         </button>
                     </div>
                 <div class="modal-body">
-                        <!-- <form action='/postRecipe' method="POST">
-                            <button type='submit'>POST</button>
-                        </form> -->
                     <form action='/postRecipe' method="POST">
+                        <div class="form-group">
+                            <label for="name-text" class="col-form-label">Name</label>
+                            <input type="text" name="name" class="form-control" id="name-text"></input>
+                        </div>
                         <div class="form-group">
                             <input type="file" name="pic" accept="image/*">
                         </div>
@@ -119,7 +120,7 @@
                             <textarea name="message" class="form-control" id="message-text"></textarea>
                         </div>
                         <div class="form-group" id="recipe-form">
-                            <label for="message-text" class="col-form-label">Recipe Steps</label>
+                            <label for="recipe-text" class="col-form-label">Recipe Steps</label>
                             <div id="instructions">
                                 <input type="text" name="instructions[]">
                             </div>
@@ -139,8 +140,29 @@
                 </div>
             </div>
         </div>
+        
 
-        <div class="disccussion">
+            <% posts.forEach(p => { %>
+                <div class='post'>
+                    <div class="card">
+                        <img src="<%=p.image%>" id='recipe-pic' style="width:100%">
+                        <div class="container">
+                          <h4><b><%=p.name%></b></h4> 
+                            <h4><%=p.body%></h4>
+                        </div>
+                      </div>
+                    <!-- <div class='post-pic'></div>
+
+                    <div class='post-body'><%= p.body %></div>
+
+                    <div class='post-recipe'><%= p.recipe %></div>
+
+                    <div class='post-comments'></div> -->
+                </div>
+
+            <% }) %>
+
+        <!-- <div class="discussion">
             <form action="">
                 <label for="comment">Comment</label>
                 <input type="text" id="comment" name="comments" placeholder="Your Review...">
@@ -163,7 +185,7 @@
                 
                 <input type="submit" value="Submit">
             </form>
-        </div>
+        </div> -->
         
         
         <% include ./partials/footer.ejs %>
