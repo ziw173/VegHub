@@ -1,15 +1,18 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var path = require('path');
-var session = require('express-session');
-var expressValidator = require('express-validator');
-var index = require('./routes/index');
-var recipe = require('./routes/recipe');
-var register = require('./routes/register');
-var profile = require('./routes/profile');
-var singleRecipe = require('./routes/singleRecipe');
+const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
+const session = require('express-session');
+const expressValidator = require('express-validator');
+const index = require('./routes/index');
+const recipe = require('./routes/recipe');
+const register = require('./routes/register');
+const profile = require('./routes/profile');
+const singleRecipe = require('./routes/singleRecipe');
+const URI = require('./models/post').uri;
+const mongoose = require('mongoose');
 
-var app = express();
+
+const app = express();
 
 //template engine
 app.set('views', path.join(__dirname, 'views'));
@@ -32,7 +35,14 @@ app.use('/register', register.router);
 app.use('/profile', profile.router);
 app.use('/singleRecipe', singleRecipe.router);
 
+//Connect DB
+mongoose.connect(URI,
+    {useNewUrlParser: true}, (err) => {
+        if (err) throw err;
+        console.log("The Mongoose connection is ready.");
+});
+
 //Start server
-var server = app.listen(app.get('port'), () => {
+const server = app.listen(app.get('port'), () => {
     console.log('Server started on port ' + app.get('port'));
 });

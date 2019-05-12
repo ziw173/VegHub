@@ -107,13 +107,13 @@
                         </button>
                     </div>
                 <div class="modal-body">
-                    <form action='/postRecipe' method="POST">
+                    <form action='/upload' enctype="multipart/form-data" method="POST">
                         <div class="form-group">
                             <label for="name-text" class="col-form-label">Name</label>
                             <input type="text" name="name" class="form-control" id="name-text"></input>
                         </div>
                         <div class="form-group">
-                            <input type="file" name="pic" accept="image/*">
+                            <input type="file" name="file" id="file">
                         </div>
                         <div class="form-group">
                             <label for="message-text" class="col-form-label">Message</label>
@@ -133,40 +133,34 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" value='postRecipe' class="recipe-post-button btn btn-primary">Post</button>
+                            <button type="submit" class="recipe-post-button btn btn-primary">Post</button>
                         </div>
                     </form>
                 </div>
                 </div>
             </div>
         </div>
-        
 
-            <% posts.forEach(p => { %>
-                <div class='post'>
-                    <div class="card">
-                        <img src="<%=p.image%>" id='recipe-pic' style="width:100%">
-                        <div class="container">
-                          <h4><b><%=p.name%></b></h4> 
-                            <h4><%=p.body%></h4>
-                        </div>
-                      </div>
-                    <!-- <div class='post-pic'></div>
-
-                    <div class='post-body'><%= p.body %></div>
-
-                    <div class='post-recipe'><%= p.recipe %></div>
-
-                    <div class='post-comments'></div> -->
+        <% posts.reverse().forEach(p => { %>
+            <div class='post'>
+                <div class="card">
+                    <img src="/image/<%=p.image.data%>" id='recipe-pic' style="width:100%">
+                    <div class="container">
+                        <h4><b><%=p.name%></b></h4> 
+                        <h4><%=p.body%></h4>
+                    </div>
                 </div>
-
-            <% }) %>
+                <!-- <div class='post-pic'></div>
+                <div class='post-body'><%= p.body %></div>
+                <div class='post-recipe'><%= p.recipe %></div>
+                <div class='post-comments'></div> -->
+            </div>
+        <% }) %>
 
         <!-- <div class="discussion">
             <form action="">
                 <label for="comment">Comment</label>
                 <input type="text" id="comment" name="comments" placeholder="Your Review...">
-
                 <label for="diet">Your Diet</label>
                 <select id="diet" name="Diet">
                     <option value="vegan">Vegan</option>
@@ -175,12 +169,10 @@
                 <input type="submit" value="Submit">
             </form>
         </div>
-
         <div>
             <form action="">
                 <label for="recipeSubmission">Recipe Submission</label>
                 <input type="text" id="recipeSubmission" name="submission" placeholder="Share your recipe...">
-
                 <button type="button" onclick="alert('This should submit Recipe Picture')">Upload Recipe Picture</button>
                 
                 <input type="submit" value="Submit">
