@@ -1,0 +1,63 @@
+<!-- recipe.ejs -->
+<html>
+    <head>
+        <% include ./partials/header.ejs %>
+        <script type="text/javascript" src="/js/recipe.js"></script>   
+    </head>
+    <body>
+        <% include ./partials/navbar.ejs %>
+        <h1> Recipes </h1>
+
+            <body>
+                
+                <div class='card-container'>
+                  <div class="card">
+                    <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F4306820.jpg&w=596&h=399.32000000000005&c=sc&poi=face&q=85" id='recipe-pic' alt="Avatar" style="width:100%">
+                    <a href='singleRecipe' class='btn btn-primary recipe-button'>Show More</a>
+                    <div class="container">
+                      <h4><b>Tofu Breakfast</b></h4> 
+                        <h4>ingredients</h4>
+                        <ul style="list-style-type:circle;">
+                            <li>1 package of extra-firm tofu</li>
+                            <li>3 tablespoons olive oil</li>
+                            <li>1/2 teaspoon salt</li>
+                            <li>black pepper</li>
+                            <li>2 cups chopped tomatoes</li>
+                          </ul> 
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="https://images.media-allrecipes.com/userphotos/720x405/5483903.jpg" id='recipe-pic' alt="Avatar" style="width:100%">
+                    <a href='singleRecipe' class='btn btn-primary recipe-button'>Show More</a>
+                    <div class="container">
+                      <h4><b>Veggie Burger</b></h4> 
+                        <h4>ingredients</h4>
+                        <ul style="list-style-type:circle;">
+                            <li>4 baked potatoes</li>
+                            <li>15 oz black beans</li>
+                            <li>1/2 onion</li>
+                            <li>6 mushrooms</li>
+                            <li>2 cloves garlic</li>
+                          </ul> 
+                    </div>
+                  </div> 
+
+                  <div class="card">
+                    <img src="https://simple-veganista.com/wp-content/uploads/2016/05/enlighten-smoothie-bowl.jpg" id='recipe-pic' alt="Avatar" style="width:100%">
+                    <a href='singleRecipe' class='btn btn-primary recipe-button'>Show More</a>
+                    <div class="container">
+                      <h4><b>Smoothie Bowl</b></h4> 
+                        <h4>ingredients</h4>
+                        <ul style="list-style-type:circle;">
+                            <li>1 1/2 cups berry mix or frozen fruit mix of choice</li>
+                            <li>1 1/2 fresh banana (use the other half sliced on top)</li>
+                            <li>2 tablespoons almond or natural peanut butter or 1 scoop vegan protein powder, optional</li>
+                            <li>1/2 cup waters</li>
+                            <li>3 – 4 ice cubes</li>
+                        </ul> 
+                    </div>
+                  </div>   
+                </div>
+    </body>
+</html>
